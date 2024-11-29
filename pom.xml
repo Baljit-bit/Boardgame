@@ -113,6 +113,20 @@
         </execution>
     </executions>
 </plugin>
+			<plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.9.0.2155</version>
+            <configuration>
+                <!-- Define the main source code directory -->
+                <sonar.sources>src/main/java</sonar.sources>
+                <!-- Define the test source code directory -->
+                <sonar.tests>src/test/java</sonar.tests>
+
+                <!-- Exclude certain files if needed -->
+                <sonar.exclusions>**/DatabaseServiceProjectApplicationTests.java</sonar.exclusions> <!-- Optional, if you want to exclude specific files from analysis -->
+            </configuration>
+        </plugin>
 		</plugins>
 	</build>
 
